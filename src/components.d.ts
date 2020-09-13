@@ -5,28 +5,26 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { MatchResults } from "@stencil/router";
 export namespace Components {
-    interface AppHome {
+    interface AppBooks {
     }
-    interface AppProfile {
-        "match": MatchResults;
+    interface AppCart {
     }
     interface AppRoot {
     }
 }
 declare global {
-    interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
+    interface HTMLAppBooksElement extends Components.AppBooks, HTMLStencilElement {
     }
-    var HTMLAppHomeElement: {
-        prototype: HTMLAppHomeElement;
-        new (): HTMLAppHomeElement;
+    var HTMLAppBooksElement: {
+        prototype: HTMLAppBooksElement;
+        new (): HTMLAppBooksElement;
     };
-    interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
+    interface HTMLAppCartElement extends Components.AppCart, HTMLStencilElement {
     }
-    var HTMLAppProfileElement: {
-        prototype: HTMLAppProfileElement;
-        new (): HTMLAppProfileElement;
+    var HTMLAppCartElement: {
+        prototype: HTMLAppCartElement;
+        new (): HTMLAppCartElement;
     };
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
     }
@@ -35,22 +33,21 @@ declare global {
         new (): HTMLAppRootElement;
     };
     interface HTMLElementTagNameMap {
-        "app-home": HTMLAppHomeElement;
-        "app-profile": HTMLAppProfileElement;
+        "app-books": HTMLAppBooksElement;
+        "app-cart": HTMLAppCartElement;
         "app-root": HTMLAppRootElement;
     }
 }
 declare namespace LocalJSX {
-    interface AppHome {
+    interface AppBooks {
     }
-    interface AppProfile {
-        "match"?: MatchResults;
+    interface AppCart {
     }
     interface AppRoot {
     }
     interface IntrinsicElements {
-        "app-home": AppHome;
-        "app-profile": AppProfile;
+        "app-books": AppBooks;
+        "app-cart": AppCart;
         "app-root": AppRoot;
     }
 }
@@ -58,8 +55,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-            "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
+            "app-books": LocalJSX.AppBooks & JSXBase.HTMLAttributes<HTMLAppBooksElement>;
+            "app-cart": LocalJSX.AppCart & JSXBase.HTMLAttributes<HTMLAppCartElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
         }
     }
